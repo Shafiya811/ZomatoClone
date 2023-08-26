@@ -1,0 +1,61 @@
+* {
+    /* margin & padding -> 0, to remove defalut margin &padding */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f9fcf9;
+    font-family: 'Merriweather', serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+
+}
+
+.navbar_brand {
+    width: 100px;
+}
+
+.navbar_logo {
+    /* if we resize img it will appear squized so make parent node size to 100px and logoimg to 100%  */
+    width: 100%; 
+}
+
+.nav_item {
+    background-image: linear-gradient( to right,#ff512f 0%, #dd2476 51%, #ff512f 100% );
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.nav_item:hover {
+    /* border: 3px solid #dd2476; */
+    background-image: linear-gradient(to left,#EA1179 0%, #F6635C 51%, #EA1179 100%);
+    cursor: pointer;
+}
+
+@media (min-width : 768px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 10px 30px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .navbar_brand {
+        width: 150px;
+    }
+    
+    .nav_item {
+        padding: 20px;;
+    }
+}
