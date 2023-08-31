@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #f9fcf9;
+    background-color: #e2e2e0;
     font-family: 'Merriweather', serif;
 }
 
@@ -28,7 +28,7 @@ body {
     width: 100%; 
 }
 
-.nav_item {
+.button_primary {
     background-image: linear-gradient( to right,#ff512f 0%, #dd2476 51%, #ff512f 100% );
     color: #fff;
     border: none;
@@ -37,10 +37,112 @@ body {
     font-weight: 600;
 }
 
-.nav_item:hover {
+.button_primary:hover {
     /* border: 3px solid #dd2476; */
     background-image: linear-gradient(to left,#EA1179 0%, #F6635C 51%, #EA1179 100%);
     cursor: pointer;
+}
+/* main section */
+.section {
+    margin: 4rem 0;
+}
+.container {
+    max-width: 100%;
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+.hero_container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.hero_image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 /25%);
+    /* background-image: url(images/heroShape.svg); */
+}
+
+.hero_description {
+ margin: 15px;
+}
+.main_text {
+    margin-top: 1rem;
+    color: #0C356A;
+
+}
+
+.heading_text {
+    margin-top: 1rem;
+    color: #0C356A;
+
+}
+/* explore menu  */
+
+.explore_menu_container {
+   margin: 1.5rem 0;
+}
+
+.explore_menu_list {
+ width: 100%;
+}
+
+.food_card {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 15px ;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Adding a smooth transition */
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 /25%);
+
+}
+.food_card:hover {
+    transform: scale(0.8); /* Expand the block on hover */
+
+}
+.food_card_image {
+ width: 100%;
+ border-radius: 8px 8px 0 0;
+}
+
+.food_card_description {
+    padding: 15px;
+}
+
+.view_more_button {
+    width: 100%;
+    background: none;
+    background-image: linear-gradient( to right,#ff512f 0%, #dd2476 51%, #ff512f 100% );
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+    /* height: 50px; */
+    /* margin: 2rem 0; */
+    transition: 0.3s;
+    padding: 1rem;
+}
+
+.get_updates {
+    margin-top: 20px;
+}
+
+.get_updates_box {
+    margin-top: 3px;
+    align-items: center;
+    display: flex;
+    padding: 0.5rem;
+}
+
+.email_box {
+    border-radius: 5px;
+    border: 1px solid #f5a2c7;
+    background-color: #fde2e1;
+    font-weight: 700;
+    padding: 0.5rem;
+    margin-right: 5px;
 }
 
 @media (min-width : 768px) {
@@ -48,14 +150,89 @@ body {
         justify-content: space-between;
         padding: 10px 30px;
     }
+
+    .hero_container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .hero_image {
+        width: 500px;
+      
+    }
+    .main_text {
+        text-align: left;
+    }
+
+    .heading_text {
+        text-align: center;
+        font-weight: 800;
+        font-size: 30px;
+    }
+    /* explore menu  */
+    .explore_menu_container{
+        position: relative;
+        margin-top: 3rem;
+    }
+    .menu_backdesign {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient( to right,#ff512f 0%, #dd2476 51%, #ff512f 100% );
+        transform: skewY(-5deg);
+        z-index: -3;
+    }
+    .explore_menu_list {
+        display: flex;
+        margin-top: 50px;
+    }
+
+    .food_card {
+        margin: 10px;
+    }
+    
+    #pizza_card {
+        margin-top: -20px;
+        margin-bottom: 30px;
+    }
+
+    .view_more_button:hover {
+        cursor: pointer;
+        background: none;
+        text-emphasis-color: rgb(180, 14, 111);
+        transform: scale(0.8); 
+    }
+    /* subscriber box/get updates */
+    .get_updates {
+        margin: 20px;
+        display: grid;
+        justify-content: center;
+    }
 }
 
 @media(min-width: 1024px) {
+    .container {
+        max-width: 70%;
+        
+    }
+
     .navbar_brand {
         width: 150px;
     }
     
-    .nav_item {
-        padding: 20px;;
+    .button_primary {
+        padding: 20px;
     }
+
+    .hero_image {
+        width: 550px;
+    }
+    .hero_description {
+        font-size: 20px;
+    }
+  /* subscriber box/get updates */
+  .get_updates {
+    margin: 50px;
+    font-size: large;    
+}
 }
