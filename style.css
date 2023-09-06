@@ -22,8 +22,16 @@ body {
 
 .navbar_brand {
     width: 100px;
+    /* animation */
+    animation: 10s logo infinite;
+    animation-delay: 2s;
 }
 
+@keyframes logo {
+    20%{
+    margin-left : 70%;
+    }
+}
 .navbar_logo {
     /* if we resize img it will appear squized so make parent node size to 100px and logoimg to 100%  */
     width: 100%;
@@ -36,8 +44,15 @@ body {
     padding: 12px;
     border-radius: 6px;
     font-weight: 600;
+    animation: 5s button;
+    
 }
-
+@keyframes button {
+    20% {
+        transform: rotate(360deg);
+    }
+    
+}
 .button_primary:hover {
     background-image: linear-gradient(to left, #EA1179 0%, #F6635C 51%, #EA1179 100%);
     cursor: pointer;
